@@ -1,5 +1,8 @@
-# Awesome-Normalization-Free-Networks
-## Normalization-Free Networks (NFNets): History, Progression, Variants, & Applications
+# 🚀 Awesome-Normalization-Free-Networks
+
+![Banner](assets/banner.svg)
+
+## 🌟 Normalization-Free Networks (NFNets): History, Progression, Variants, & Applications
 
 **Normalization-Free Networks (NFNets)** are an advanced class of hardware-aware deep convolutional neural networks designed to achieve state-of-the-art visual training scaling and predictive accuracy without utilizing Batch Normalization (BatchNorm) layers. Developed strictly to overcome the fundamental engineering constraints of traditional deep visual networks, NFNets replace statistical activation normalization with a unified combination of **Adaptive Gradient Clipping (AGC)**, custom scaled residual connections, and specialized weight initializations. 
 
@@ -7,7 +10,7 @@ By eliminating the physical requirement to compute running batch statistics acro
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 🕰️ 1. The Macro Chronological Evolution
 
 The technical framework governing visual parameter stabilization has transitioned from un-normalized exploding gradients to rigid batch synchronization loops, weight-standardized alternatives, and modern adaptive gradient scaling protocols.
 
@@ -29,7 +32,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Algorithmic Variants
+## ⚙️ 2. Core Functional & Algorithmic Variants
 
 The Normalization-Free family tree features specialized architectural modifications designed to scale up convolutional networks, vision transformers, and speech pipelines cleanly.
 
@@ -41,7 +44,7 @@ The Normalization-Free family tree features specialized architectural modificati
 
 ---
 
-## 3. The NFNet Layer Execution Matrix
+## 📊 3. The NFNet Layer Execution Matrix
 
 To process high-resolution visual patches smoothly without triggering numerical saturation, the deep compiler overlaps layer forward passes with localized gradient calculations.
 
@@ -63,7 +66,7 @@ flowchart TB
 
 ---
 
-## 4. Production Engineering Challenges & Cluster Solutions
+## 🏗️ 4. Production Engineering Challenges & Cluster Solutions
 
 Deploying large-scale Normalization-Free networks across massive enterprise cloud supercomputing clusters introduces unique performance constraints.
 
@@ -74,7 +77,7 @@ Deploying large-scale Normalization-Free networks across massive enterprise clou
 
 ---
 
-## 5. Frontier Real-World AI Industrial Applications
+## 🌍 5. Frontier Real-World AI Industrial Applications
 
 | Application | Description | Year | Paper Link | Details |
 |---|---|---|---|---|
@@ -84,7 +87,7 @@ Deploying large-scale Normalization-Free networks across massive enterprise clou
 
 ---
 
-## References
+## 📚 References
 1. Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. *International Conference on Machine Learning (ICML)*, 448-456.
 2. Qiao, S., et al. (2019). Weight standardization. *arXiv preprint arXiv:1903.10520*.
 3. Kolesnikov, A., et al. (2020). Big transfer (BiT): General visual representation learning. *European Conference on Conference on Computer Vision (ECCV)*.
@@ -101,7 +104,7 @@ To advance this documentation repository, structural setup, or post-training dep
 
 ***
 
-**Follow-Up Options Matrix:**
+## 🔮 Follow-Up Options Matrix:
 
 Before updating this documentation repository layout, let me know how you would like to proceed by choosing one of the options below:
 * I can provide a **complete Python code boilerplate using PyTorch** demonstrating how to write an automated script that applies Scaled Weight Standardization over a multi-channel convolutional kernel matrix.
