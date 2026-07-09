@@ -13,7 +13,10 @@ The technical framework governing visual parameter stabilization has transitione
 
 
 ```mermaid
-[Un-normalized Exploding CNNs] ───> [Batch Normalization (ResNet, 2015)] ───> [Weight Standardization (BiT, 2019)] ───> [Adaptive Normalization-Free (NFNet, 2021)](Catastrophic Optimization Blocks)     (Symmetric Multi-Node Memory Chokes)       (Group-Wise Variance Normalization)          (Scale-Invariant Adaptive Layer Clips)
+flowchart LR
+    A["Un-normalized Exploding CNNs<br>(Catastrophic Optimization Blocks)"] --> B["Batch Normalization (ResNet, 2015)<br>(Symmetric Multi-Node Memory Chokes)"]
+    B --> C["Weight Standardization (BiT, 2019)<br>(Group-Wise Variance Normalization)"]
+    C --> D["Adaptive Normalization-Free (NFNet, 2021)<br>(Scale-Invariant Adaptive Layer Clips)"]
 ```
 
 
@@ -55,8 +58,14 @@ The Normalization-Free family tree features specialized architectural modificati
 To process high-resolution visual patches smoothly without triggering numerical saturation, the deep compiler overlaps layer forward passes with localized gradient calculations.
 
 
+**The NFNet Forward-Backward Pipeline**
 ```mermaid
-The NFNet Forward-Backward Pipeline[Input Visual Batch] ───> [Scaled Weight Standardization] ───> [Compute Layer Forward Pass Math]│▼[Update Master Weights] <─── [Adaptive Gradient Clipping (AGC)] <─── [Calculate Layer Gradient G_l]
+flowchart TB
+    A["Input Visual Batch"] --> B["Scaled Weight Standardization"]
+    B --> C["Compute Layer Forward Pass Math"]
+    C --> D["Calculate Layer Gradient G_l"]
+    D --> E["Adaptive Gradient Clipping (AGC)"]
+    E --> F["Update Master Weights"]
 ```
 
 *   **Scaled Weight Standardization**
